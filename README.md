@@ -1,4 +1,5 @@
-[Explore the docs »](https://github.com/BarannUnsal/SedoFurniture)
+<a class=text-center>[Explore the docs »](https://github.com/BarannUnsal/SedoFurniture)</a>
+
 
 [View Demo ](https://www.sedomobilya.com/)
 [ Report Bug ](https://github.com/BarannUnsal/SedoFurniture/issues)
