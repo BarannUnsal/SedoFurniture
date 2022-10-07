@@ -1,5 +1,5 @@
-<p align="center">
-  [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture)
+<a align="center" href="https://github.com/BarannUnsal/SedoFurniture">
+  Explore the docs »
 </p>
   
 
