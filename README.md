@@ -2,8 +2,7 @@
   <img height="48" width="48" src="https://user-images.githubusercontent.com/96000792/194586367-d43522c7-1ed7-446c-8e65-08ff7c3635bf.png" />
 </p>
 
-  [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture) 
-<a href="https://www.markdownguide.org" target="_blank" style="text-align:center">Learn Markdown!</a>
+<a href="https://github.com/BarannUnsal/SedoFurniture" style="text-align:center">Explore the docs »</a>
   
 
 [View Demo ](https://www.sedomobilya.com/)
