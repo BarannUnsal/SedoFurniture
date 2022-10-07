@@ -1,9 +1,11 @@
 <p align="center">
   <img height="48" width="48" src="https://user-images.githubusercontent.com/96000792/194586367-d43522c7-1ed7-446c-8e65-08ff7c3635bf.png" />
 </p>
+<center>
 <a align="center" href="https://github.com/BarannUnsal/SedoFurniture">
   Explore the docs »
 </a>
+</center>
   
 
 [View Demo ](https://www.sedomobilya.com/)
