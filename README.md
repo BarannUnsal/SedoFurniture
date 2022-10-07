@@ -16,4 +16,9 @@ Design patterns and some technologies I used in the project
 - **Onion Architecture**
 - **EF Core
 
-
+## Built With
+- Asp Net Core 6
+- MVC
+- EF Core
+- Bootstrap
+- Jquery
