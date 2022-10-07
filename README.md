@@ -23,4 +23,4 @@
 - Jquery
 
 ## Contact
-Baran Ünsal [barannunsal@gmail.com](barannunsal@gmail.com)
+Baran Ünsal - [barannunsal@gmail.com](barannunsal@gmail.com)
