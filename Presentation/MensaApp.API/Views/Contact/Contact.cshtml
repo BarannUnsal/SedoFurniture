@@ -1,0 +1,171 @@
+﻿@model MensaApp.Domain.Entities.Contact
+
+@{
+    ViewData["Title"] = "İletişim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+    </ol>
+</nav>
+
+<div class="container mb-5 mt-3">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="mt-3 header_">Sıkça Sorulan Sorular</h1>
+            <div class="accordion accordion-flush mt-3" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Mobilyaların Taşınması ve Nakiliyesinde Dikkat Edilmesi Gerekenler
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            1 - Taşınma esnasında mobilyayı ters sırasıyla sökünüz. Taşıma esnasında parçaların zarar görmemesine dikkat ediniz. Mobilyalarınızı temiz ve düz bir zemin üzerinde monte ediniz.
+                            <br />
+                            2 - Eğer evin içinde mobilyalarınızın yerlerini değiştirecekseniz bütün rafları çıkarınız. Ürünü; kapı,çekmece gibi hareketli parçaları yukarıya gelecek şekilde taşıyınız.
+                            <br />
+                            4 - Mobilyalarınızı iterek veya sürükleyerek yer değiştirmeyi denemeyiniz. Kurulu ürünü sürükleyerek değil, kaldırarak taşıyınız.
+                            <br />
+                            5 - Başka konuma taşıyacaksanız mutlaka paketleme yapınız.
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Mobilya Kullanımına Dikkat Edilmesi Gerekenler
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            1 - Vidalar ve bağlantı parçaları daima sıkıca ve usulune uygun monte edilmelidir. Çıkık parçalara giysi
+                            parçaları (Örn: gömlek, kravat elbise v.b.) takılabilir.
+                            <br />
+                            2 - Bağlantı elemanlarının bir parçası eksik veya hatalı ise lütfen ürünü kullanmayınız.
+                            <br />
+                            3 - Temizlik için kesinlikle asit, baz içerikli maddeler ve sert cisimler kullanmayınız.
+                            <br />
+                            4 - Kumaş üzerine dökülen bir sıvıyı hemen temizlemenizi ve lekenin yayılmaması için lekeli bölgeyi dıştan içe doğru bastırmadan temizlemenizi tavsiye ederiz.
+                            <br />
+                            5 - Temizlik işlemi yaparken kesinlikle halı yıkama, vakumlu ıslak temizleme makinelerini kullanmayınız.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            Ürünlerin Kullanımı, Kurulumu, Bakımı ve Basit Onarımlarında Dikkat Edilmesi Gerekenler
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            1 - Çamaşırlık ve komodin gibi bir çok çekmeceden, kapaktan oluşan ürünlerde mobilyanın devrilmesini önlemek için kapak ve çekmeceleri aynı anda açmayınız.
+                            <br />
+                            2 - Mobilyanızı aşırı yüklemeyiniz. Ürünün dengesini bozabilecek ağırlıklardan kaçınınız.
+                            <br />
+                            3 - Ürünler yüksek sıcaklık ve rutubete maruz bırakılmamalı, ürünlerin üzerine sıcak nesneler konulmamalıdır.
+                            <br />
+                            4 - Ürünlerin mobilya -ahşap- metal kısımlarının su ile uzun süreli temas etmemesine dikkat edilmeli, su ile temas eden yüzeyler kurulanmalıdır,nemli bırakılmamalıdır.
+                            <br />
+                            5 - Suntalam ürünlerin temizliğinde az nemli pamuklu bez (kesinlikle ıslak olmamalıdır)veya mobilya temizleme maddeleri kullanılmalı, hemen ardından kağıt havlu ya da kurulama bezi ile kurulanmalıdır.Kesinlikle asitik veya sentetik çözücü kullanılmamalıdır. Bazı durumlarda çıkmayan lekeler oluşmuş ise selülozik tiner ile temizlenmesi tavsiye edilir.
+                            <br />
+                            6 - Suntalam ürünlerin çekmece ünitelerinin içerisine taşıyabileceğinden fazla malzeme depolanmamalıdır.Ray sistemlerinin taşıma kapasitesinin aşılması durumunda, çekmece çalışmasında kasma ya da boşa çıkma gibi sorunlar meydana gelebilmektedir. Teleskopik metal ray kullanılan ürünlerde ise ray içindeki çelik bilyalar zarar görmektedir.
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            Ürünlerimizin Nakliyesini Nasıl Yapıyoruz?
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            1 - Tarafımızca oluşuturlan uzman kadromuz ile mobilyanızın montajını ve nakliyesi yapımaktayız.
+                            <br />
+                            2 - Ürününüzü seçtikten sonra nakliye gününüzü planlayarak teslimatınızı en hızlı ve sorunsuz şekilde gerçekleştirmek için çalışırız.
+                            <br />
+                            3 - Teslimat tarihinden 1 gün önce teslimatın yapılacağı saat aralığını sizinle iletişime geçip teslimat için sizden teyit alırız.
+                            <br />
+                            4 - Nakliye hizmeti sırasında oluşabilecek tüm problemler için size Mensa Mobilya garantisi sunarız.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            Garanti Koşulları
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            1 - Garanti süresi mobilyaların teslim tarihinden itibaren 2 yıl geçerlidir.
+                            <br />
+                            2 - Garanti süresi tamamlandıktan sonraki servis hizmetleri, ücrete tabii tutulur.
+                            <br />
+                            3 - Malın garanti süresi içerisinde gerek malzeme ve işçilik, gerekse montaj hatalarından dolayı arızalanması halinde, işçilik masrafı, değişen parça bedeli yada başka herhangi bir ad altında hiçbir ücret talep etmeksizin malın tamiri yapılacaktır.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+                <h1 class="header_ mt-3 text-start">Bizimle İletişime Geçin!</h1>
+                <p class="text-center mt-2 mb-2">Fikirlerin bizler için değerli!</p>
+            <ul class="list-unstyled mb-3">
+                <li>
+                    <i class="fa-solid fa-phone mb-4 mt-5" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2"> <a href="tel:+90 536 844 90 80" class="text-decoration-none text-black">+90 536 844 90 80</a></span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope mb-4" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2"> <a href="mailto:sedomobilya@gmail.com" class="text-decoration-none text-black">sedomobilya@gmail.com</a></span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-location-pin" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2 pb-5"> Eğitim Mahallesi Kerim Gökay Caddesi Rıfat Yenice Apartmanı No:81</span>
+                </li>
+            </ul>
+            <form method="post" id="contact" class="row mt-5">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control form_input shadow-none" asp-for="Name" id="floatingInput" placeholder="Adınız ve Soyadınız">
+                        <label for="floatingInput">İsminiz</label>
+                        <span style="color:red;" asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control form_input shadow-none" asp-for="Email" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">E-Posta</label>
+                        <span style="color:red;" asp-validation-for="Email"></span>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control form_input shadow-none" asp-for="Subject" id="floatingInput" placeholder="Konu">
+                    <label for="floatingInput">Konu</label>
+                    <span style="color:red;" asp-validation-for="Subject"></span>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control form_input shadow-none" asp-for="Description" placeholder="Mesajınızı buraya yazınız" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Mesajınız</label>
+                    <span style="color:red;" asp-validation-for="Description"></span>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <button class="btn w-100 contact_btn">Gönder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>

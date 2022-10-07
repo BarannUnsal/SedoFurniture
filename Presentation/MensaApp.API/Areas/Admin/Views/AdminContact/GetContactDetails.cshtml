@@ -1,0 +1,18 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Gelen Kutusu";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Gelen Mesaj Detayı</h1>
+<form class="form-control-lg">
+    <label>İsim</label>
+    <input asp-for="Name" class="form-control" type="text" readonly />
+    <br />
+    <label>Email</label>
+    <input asp-for="Email" class="form-control" type="text" readonly />
+     <br />
+    <label>Mesaj İçeriği</label>
+    <textarea asp-for="Description" class="form-control" rows="5" cols="15" readonly ></textarea>
+</form>

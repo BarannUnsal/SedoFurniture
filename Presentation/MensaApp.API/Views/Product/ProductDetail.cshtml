@@ -1,0 +1,73 @@
+﻿@model Product
+@using MensaApp.API.Filters
+
+@{
+    ViewData["Title"] = $"{Model.Name}";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/category/@Model.Category.Id/@SEOLinks.ChangeLinks(Model.Category.CategoryName.ToLower())">@Model.Category.CategoryName</a></li>
+        <li class="breadcrumb-item"><a href="/subcategory/@Model.SubCategory.Id/@SEOLinks.ChangeLinks(@Model.SubCategory.Name.ToLower())">@Model.SubCategory.Name</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+    </ol>
+</nav>
+
+<div class="container mt-5 mb-3">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Model.ProductImages.Count(); i++)
+                    {
+                        var active = i == 1 ? "active" : "";
+                        <div class="carousel-item @active">
+                            <img src="~/ProductImages/@Model.ProductImages[i].ImageName" alt="@Model.Name">
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <ol class="carousel-indicators list-inline">
+                    @for (int i = 0; i < Model.ProductImages.Count(); i++)
+                    {
+                        var active = i == 1 ? "active" : "";
+                        var selected = active;
+                        <li class="list-inline-item @active">
+                            <a class="@selected" data-slide-to="@Model.ProductImages[i]" data-target="#custCarousel">
+                                <img src="~/ProductImages/@Model.ProductImages[i].ImageName" class="img-fluid">
+                            </a>
+                        </li>
+                    }
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            <h1 style="font-family: 'Raleway', sans-serif;">@Model.Name</h1>
+            <h4><a href="/category/@Model.Category.Id/@SEOLinks.ChangeLinks(Model.Category.CategoryName.ToLower())" class="sub_title">@Model.Category.CategoryName</a> / <a href="/subcategory/@Model.SubCategory.Id/@SEOLinks.ChangeLinks(@Model.SubCategory.Name.ToLower())" class="sub_title">@Model.SubCategory.Name</a></h4>
+            <hr />
+            <p style="font-family: 'Open Sans', sans-serif; font-size:18px;">@Model.Description</p>
+            <a class="btn mt-2 product_btn" asp-action="Contact" asp-controller="Contact">İletişime Geçin</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 mt-5">
+    <h1 class="text-center header_ pt-5">Öne Çıkanlar</h1>
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    function preview(img) {
+        img.className = "selected";
+        document.getElementById(0).src = img.src;
+    }
+</script>

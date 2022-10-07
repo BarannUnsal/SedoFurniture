@@ -1,0 +1,21 @@
+﻿@model IQueryable<Category>
+@using MensaApp.API.Filters
+
+<div class="side_menu border p-3">
+    <h2 class="h2_cat" style="color: #F07B3F;font-family: 'Raleway', sans-serif;">Kategoriler</h2>
+    @foreach (var item in Model)
+    {
+        <h4 class="pt-3 mt-3 d-flex justify-content-between">
+            <a class="side_menu_list_item" id="cat" href="/category/@item.Id/@SEOLinks.ChangeLinks(item.CategoryName.ToLower())">@item.CategoryName</a>
+        </h4>
+        @if (item.SubCategories != null)
+        {
+            @for (int i = 0; i < item.SubCategories.Count(); i++)
+            {
+                <h6 id="subs">
+                    <a href="/subCategory/@item.SubCategories[i].Id/@SEOLinks.ChangeLinks(item.SubCategories[i].Name.ToLower())" class=" sub_menu text-black-50">@item.SubCategories[i].Name</a>
+                </h6>
+            }
+        }
+    }
+</div>

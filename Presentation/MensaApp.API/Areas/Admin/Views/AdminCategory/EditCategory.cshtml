@@ -1,0 +1,22 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Kategori Güncelleme";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Kategori Güncelle</h1>
+<form class="form-group" asp-action="EditCategory" asp-controller="AdminCategory" method="post">
+    <label>Kategori Adı</label>
+    <input type="text" class="form-control" asp-for="CategoryName" />
+    <span asp-validation-for="CategoryName" class="text-danger"></span>
+    <br />
+    <label>Aktif</label>
+    <input type="checkbox" class="form-check-input" asp-for="IsActive" />
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
+<div asp-validation-summary="ModelOnly"></div>
+<script src="~/lib/jquery/dist/jquery.js"></script>

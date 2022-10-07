@@ -1,0 +1,37 @@
+﻿@using MensaApp.Domain.Entities
+@model List<Product>
+
+<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+    <div class="card flex-fill">
+        <div class="card-header">
+            <h5 class="card-title mb-0">Son Eklenen Ürünler</h5>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered my-0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>İsim</th>
+                        <th>Kategori Adı</th>
+                        <th>Alt Kategori</th>
+                        <th>Yüklenme Tarihi</th>
+                        <th>Güncellenme Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Category.CategoryName</td>
+                            <td>@item.SubCategory.Name</td>
+                            <td>@item.CreateDate</td>
+                            <td>@item.UpdateDate</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

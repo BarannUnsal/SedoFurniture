@@ -1,0 +1,63 @@
+﻿@model Contact
+
+<div class="contact_form pt-5 pb-5">
+    <div class="container pt-5 pb-5">
+        <div class="card" style="border-radius:20px;">
+            <h1 class="header_ text-center">İletişim</h1>
+            <div class="row">
+                <div class="col-lg-7 mb-4 ms-md-3">
+                    <form method="post" id="contact" asp-action="ContactForm" asp-controller="Home" class="row"
+                        style="font-family: 'Open Sans', sans-serif;">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control form_input shadow-none" asp-for="Name"
+                                    id="floatingInput" placeholder="Adınız ve Soyadınız" />
+                                <label for="floatingInput">İsminiz</label>
+                                <span style="color:red;" asp-validation-for="Name"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control form_input shadow-none" asp-for="Email"
+                                    id="floatingInput" placeholder="name@example.com" />
+                                <label for="floatingInput">E-Posta</label>
+                                <span style="color:red;" asp-validation-for="Email"></span>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form_input shadow-none" asp-for="Subject"
+                                id="floatingInput" placeholder="Konu" />
+                            <label for="floatingInput">Konu</label>
+                            <span style="color:red;" asp-validation-for="Subject"></span>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control form_input shadow-none" asp-for="Description"
+                                placeholder="Mesajınızı buraya yazınız" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Mesajınız</label>
+                            <span style="color:red;" asp-validation-for="Description"></span>
+                        </div>
+                        <div class="col-md-12 mt-5">
+                            <button class="btn w-100 contact_btn" type="submit">Gönder</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 mt-3 ms-3 mb-4" style="font-family: 'Open Sans', sans-serif;">
+                    <i class="fa-solid fa-phone mb-4 mt-5" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2 ps-2"> +90 536 844 90 80</span>
+                    <br />
+                    <i class="fa-solid fa-envelope mb-4" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2 ps-2"> <a href="mailto:sedomobilya@gmail.com" class="text-decoration-none text-black">sedomobilya@gmail.com</a></span>
+                    <br />
+                    <i class="fa-solid fa-location-pin" style="font-size:25px; color:#F07B3F;"></i>
+                    <span style="font-size:16px;" class="ms-2 pb-5 ps-2"> Eğitim Mahallesi Kerim Gökay Caddesi Rıfat
+                        Yenice Apartmanı No:81</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="display:none;">
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>

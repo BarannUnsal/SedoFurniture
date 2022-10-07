@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = @ViewBag.CatName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.CatName</li>
+    </ol>
+</nav>
+
+<div style="display:none;">
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>
+
+<div class="container mb-5 pb-5">    
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+                <h2 class="header_ pt-3" style="font-family: 'Raleway', sans-serif;">@ViewBag.catName</h2>
+                @await Component.InvokeAsync("ProductListByCategory", new {@id = ViewBag.CatID})
+            </div>
+        </div>
+    </div>
+</div>

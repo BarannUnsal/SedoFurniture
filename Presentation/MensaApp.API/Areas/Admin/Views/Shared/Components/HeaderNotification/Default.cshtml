@@ -1,0 +1,44 @@
+﻿@model List<Contact>
+<li class="nav-item dropdown">
+    <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+        <div class="position-relative">
+            <i class="align-middle" data-feather="message-square"></i>
+            @foreach (var item in Model)
+            {
+                @if (item.MessageStatus == false)
+                {
+                    <span class="indicator">@Model.Count()</span>
+                }
+            }
+        </div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
+        <div class="dropdown-menu-header">
+            <div class="position-relative">
+                @Model.Count() Yeni Mesaj
+            </div>
+        </div>
+        <div class="list-group">
+            <div class="list-group-item">
+                <div class="row g-0 align-items-center">
+                    <div class="col-10 ps-2">
+                        @foreach (var item in Model)
+                        {
+                            @if (item.MessageStatus == false)
+                            {
+                                <a href="/Admin/AdminContact/GetContactDetails/@item.Id">
+                                    <div class="text-dark">@item.Name</div>
+                                    <div class="text-muted small mt-1">@item.Subject</div>
+                                    <div class="text-muted small mt-1">@(((DateTime)@item.CreateDate).ToString("g"))</div>
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-menu-footer">
+            <a href="/Admin/AdminContact/GetContacts" class="text-muted">Tüm Mesajları Gör (@ViewBag.all)</a>
+        </div>
+    </div>
+</li>

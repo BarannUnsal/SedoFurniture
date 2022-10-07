@@ -1,0 +1,30 @@
+﻿@model MensaApp.Domain.Entities.Project
+@{
+    ViewData["Title"] = "Proje Güncelle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Proje Güncelle</h1>
+<form class="form-group" method="post" asp-action="EditProject" asp-controller="AdminProject" enctype="multipart/form-data">
+    <label>Proje Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+    <label>Proje Açıklaması</label>
+    <input type="text" class="form-control" asp-for="Description" />
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <label>Proje Resimleri</label>
+    <input type="file" id="files" asp-for="ProjectImages" class="form-control" multiple />
+    <span asp-validation-for="ProjectImages" class="text-danger"></span>
+    <br />
+    <label>Proje Resimleri</label>
+    <input asp-for="ImageUrl" type="file" multiple class="form-control" />
+    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Proje Güncelle</button>
+</form>
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>

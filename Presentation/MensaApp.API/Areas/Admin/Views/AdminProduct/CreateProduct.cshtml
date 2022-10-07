@@ -1,0 +1,109 @@
+﻿@using MensaApp.API.Areas.Admin.Models.Products
+@model ProductViewModel
+@{
+    ViewData["Title"] = "Ürün Ekle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Yeni Ürün Ekle</h1>
+<br />
+<form class="form-group" asp-action="CreateProduct" asp-controller="AdminProduct" method="post" enctype="multipart/form-data">
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x=>x.Name, new{@class="form-control"})
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+    @Html.Label("Ürün Açıklaması")
+    @Html.TextAreaFor(x=>x.Description, 15, 3, new{@class="form-control"})
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            @Html.Label("Ürün Resimi")
+            <input type="file" id="files" asp-for="ProductImages" class="form-control" multiple />
+            <span asp-validation-for="ProductImages" class="text-danger"></span>
+            <output id="result" />
+        </div>
+        <br />
+        <div class="col-md-6">
+            @Html.Label("Ürün Küçük Resmi")
+            <input type="file" asp-for="Thumbnail" id="imgInp" class="form-control" onchange="previewFile()" />
+            <span asp-validation-for="Thumbnail" class="text-danger"></span>
+            <img id="blah" src="#" alt="Yüklenen Resim" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <label>Kategori</label>
+            <select asp-items="ViewBag.ListOfCategory" asp-for="CategoryId" class="form-control">
+                <option>Kategori Seçiniz...</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label>Alt Kategori</label>
+            <select class="form-control" asp-for="SubCategoryId">
+                <option>Alt Kategori Seçiniz...</option>
+            </select>
+            <span asp-validation-for="SubCategoryId" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    @Html.Label("Aktif")
+    @Html.CheckBoxFor(x=>x.IsActive, new{@class="form-control form-check-input"})
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Yeni Ürün Ekle</button>
+</form>
+<div asp-validation-summary="ModelOnly"></div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+        
+    //cascading
+        $(function () {
+        $("select#CategoryId").change(function () {
+            var cid = $(this).val();
+
+            $("select#SubCategoryId").empty();
+
+            $.getJSON(`/Admin/AdminProduct/GetSubCategory?cid=${cid}`, function (data) {
+                $.each(data, function (i, item) {
+                    $("select#SubCategoryId").append(`<option value="${item.id}">${item.name}</option>`);
+                });
+            });
+        })
+    });
+
+    //single
+    imgInp.onchange = evt => {
+      const [file] = imgInp.files
+      if (file) {
+        blah.src = URL.createObjectURL(file)
+       }
+    }
+
+    //multiple
+    document.querySelector("#files").addEventListener("change", (e) => {
+      if (window.File && window.FileReader && window.FileList && window.Blob) {
+        const files = e.target.files;
+        const output = document.querySelector("#result");
+        output.innerHTML = "";
+        for (let i = 0; i < files.length; i++) {
+            if (!files[i].type.match("image")) continue;
+            const picReader = new FileReader();
+            picReader.addEventListener("load", function (event) {
+              const picFile = event.target;
+              const div = document.createElement("div");
+              div.innerHTML = `<img class="thumbnail_" src="${picFile.result}" title="${picFile.name}"/>`;
+              output.appendChild(div);
+            });
+            picReader.readAsDataURL(files[i]);
+        }
+      } else {
+        alert("Your browser does not support File API");
+      }
+    });
+</script>

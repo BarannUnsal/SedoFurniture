@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Product>
+@using MensaApp.API.Filters
+
+@foreach (var item in Model)
+{
+    <div class="card ms-5 mt-5" style="width: 18rem;" >
+        <div class="card-img-top">
+            <a href="/product/@item.Id/@SEOLinks.ChangeLinks(item.Name.ToLower())">
+                <img src="~/thumbnail/@item.Thumbnail" class="card_img responsive" style="height:30vh;" alt="@item.Name">
+            </a>
+        </div>
+        <div class="card-body">
+            <h4 class="text-dark-50"><a href="/product/@item.Id/@SEOLinks.ChangeLinks(item.Name.ToLower())" class="link_card">@item.Name</a></h4>
+            <h6 class="pt-2 pb-2 text-dark-50"><small><a href="/subcategory/@item.SubCategory.Id/@SEOLinks.ChangeLinks(@item.SubCategory.Name.ToLower())" class="link_subcard">@item.SubCategory.Name</a></small></h6>
+            <div class="border"></div>
+            <p class="card-text" style="font-family: 'Work Sans', sans-serif;">@(item.Description.Length > 80 ? item.Description.Substring(0,item.Description.Substring(0,80).LastIndexOf(" "))+"..." : item.Description +"...")</p>
+        </div>
+    </div>
+}

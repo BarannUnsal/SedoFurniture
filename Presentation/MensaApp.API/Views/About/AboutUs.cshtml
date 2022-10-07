@@ -1,0 +1,23 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "Hakkımızda";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item active" aria-current="page" >Hakkımızda</li>
+    </ol>
+</nav>
+
+<div class="container mt-4 mb-4">    
+    @foreach(var item in Model)
+    {
+    <h1 class="header_ mt-5">@item.Title</h1>
+    <p class="mt-1" style="font-family: 'Open Sans', sans-serif; font-size:17px;">@item.Description</p>
+    }
+</div>
+
+<div style="display:none;">
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>

@@ -1,0 +1,286 @@
+﻿@using MensaApp.API.Filters
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="~/carousel-02/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/carousel-02/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+    <style>
+        .ftco-section {
+            padding: 7em 0;
+        }
+
+        .owl-carousel {
+            position: relative;
+        }
+
+            .owl-carousel .owl-item {
+                opacity: 1;
+            }
+
+                .owl-carousel .owl-item.active {
+                    opacity: 1;
+                }
+
+            .owl-carousel .owl-nav {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+            }
+
+                .owl-carousel .owl-nav .owl-prev,
+                .owl-carousel .owl-nav .owl-next {
+                    position: absolute;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    margin-top: -60px;
+                    color: rgba(0, 0, 0, 0.1) !important;
+                    -webkit-transition: 0.7s;
+                    -o-transition: 0.7s;
+                    transition: 0.7s;
+                    opacity: 0;
+                }
+
+                    .owl-carousel .owl-nav .owl-prev span:before,
+                    .owl-carousel .owl-nav .owl-next span:before {
+                        font-size: 30px;
+                    }
+
+                .owl-carousel .owl-nav .owl-prev {
+                    left: 0;
+                }
+
+                .owl-carousel .owl-nav .owl-next {
+                    right: 0;
+                }
+
+            .owl-carousel .owl-dots {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+                .owl-carousel .owl-dots .owl-dot {
+                    width: 10px;
+                    height: 10px;
+                    margin: 5px;
+                    border-radius: 50%;
+                    background: rgba(0, 0, 0, 0.1);
+                    position: relative;
+                }
+
+                    .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
+                        outline: none !important;
+                    }
+
+                    .owl-carousel .owl-dots .owl-dot.active {
+                        background: #1089ff;
+                    }
+
+            .owl-carousel:hover .owl-nav .owl-prev,
+            .owl-carousel:hover .owl-nav .owl-next {
+                opacity: 1;
+            }
+
+            .owl-carousel:hover .owl-nav .owl-prev {
+                left: -25px;
+            }
+
+            .owl-carousel:hover .owl-nav .owl-next {
+                right: -25px;
+            }
+
+            .owl-carousel.owl-drag .owl-item {
+                -ms-touch-action: pan-y;
+                touch-action: pan-y;
+            }
+
+        .work {
+            width: 100%;
+        }
+
+            .work .img {
+                width: 100%;
+                height: 350px;
+                position: relative;
+                -webkit-box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
+                -moz-box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
+                box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
+            }
+
+                .work .img .icon {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background: #fff;
+                    display: block;
+                    opacity: 0;
+                    -webkit-transition: 0.3s;
+                    -o-transition: 0.3s;
+                    transition: 0.3s;
+                }
+
+            .work .text h3 {
+                font-size: 18px;
+                font-weight: 500;
+            }
+
+                .work .text h3 a {
+                    color: #000;
+                }
+
+            .work .text span {
+                font-size: 12px;
+                letter-spacing: 1px;
+                color: rgba(0, 0, 0, 0.3);
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            .work:hover .img .icon {
+                opacity: 1;
+            }
+
+        .img {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        button {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+        }
+
+            button:hover, button:focus {
+                text-decoration: none !important;
+                outline: none !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;
+            }
+
+        a {
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            color: #1089ff;
+        }
+
+            a:hover, a:focus {
+                text-decoration: none !important;
+                outline: none !important;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+            a:hover {
+                color: #0056b3;
+                text-decoration: underline;
+            }
+
+            a:not([href]):not([tabindex]) {
+                color: inherit;
+                text-decoration: none;
+            }
+
+                a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                a:not([href]):not([tabindex]):focus {
+                    outline: 0;
+                }
+
+
+        img {
+            vertical-align: middle;
+            border-style: none;
+        }
+
+        button {
+            border-radius: 0;
+        }
+
+            button:focus {
+                outline: 1px dotted;
+                outline: 5px auto -webkit-focus-ring-color;
+            }
+
+
+        button {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        button {
+            overflow: visible;
+        }
+
+        button {
+            text-transform: none;
+        }
+
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+            button:not(:disabled),
+            [type="button"]:not(:disabled),
+            [type="reset"]:not(:disabled),
+            [type="submit"]:not(:disabled) {
+                cursor: pointer;
+            }
+
+            button::-moz-focus-inner,
+            [type="button"]::-moz-focus-inner,
+            [type="reset"]::-moz-focus-inner,
+            [type="submit"]::-moz-focus-inner {
+                padding: 0;
+                border-style: none;
+            }
+    </style>
+</head>
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                </div>
+                <div class="col-md-12">
+                    <div class="featured-carousel owl-carousel">
+                        @foreach (var item in Model)
+                        {
+                            <div class="item">
+                                <div class="work">
+                                    <div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/thumbnail/@item.Thumbnail);">
+                                        <a href="/product/@item.Id/@SEOLinks.ChangeLinks(item.Name.ToLower())" class="icon d-flex align-items-center justify-content-center">
+                                            <span class="ion-ios-search"></span>
+                                        </a>
+                                    </div>
+                                    <div class="text pt-3 w-100 text-center">
+                                        <h3><a href="/product/@item.Id/@SEOLinks.ChangeLinks(item.Name.ToLower())">@item.Name</a></h3>
+                                        <span>@item.Category.CategoryName</span>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

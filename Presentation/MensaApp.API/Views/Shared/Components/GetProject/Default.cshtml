@@ -1,0 +1,25 @@
+﻿@model List<Project>
+@using MensaApp.API.Filters
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<section class="hero-section-project mb-5 pb-5">
+    <div class="card-grid-project">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 mt-3">
+                    <div class="card-project">
+                        <a href="/project/@item.Id/@SEOLinks.ChangeLinks(item.Name.ToLower())">
+                            <div class="card__background-project" style="background-image: url(../projeler/@item.ImageUrl)"></div>
+                            <div class="card__content-project">
+                                <p class="card__category-project">Sedo Mobilya</p>
+                                <h3 class="card__heading-project">@item.Name</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+﻿@model MensaApp.API.Areas.Admin.Models.Admin.AdminViewModel
+@{
+    ViewData["Title"] = "Ayarlar";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h3>Kullanıcı Bilgileri</h3>
+<div class="row align-content-center">
+    <div class="col-sm-8">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Adı Soyadı</th>
+                <td>@Model.NameSurname</td>
+            </tr>
+            <tr>
+                <th>Kullanıcı Adı</th>
+                <td>@Model.UserName</td>
+            </tr>
+            <tr>
+                <th>E-Posta</th>
+                <td>@Model.Email</td>
+            </tr>
+            <tr>
+                <th>Telefon Numarası</th>
+                <td>@Model.PhoneNumber</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="col-sm-4 align-content-center">
+    <a class="btn btn-info btn-block" asp-action="UserEdit" asp-controller="AdminOption">Bilgileri Güncelle</a>
+    <a class="btn btn-info btn-block" asp-action="ChangePassword" asp-controller="AdminOption">Şifre Değiştirme</a>
+    <a class="btn btn-info btn-block" asp-action="LogOut" asp-controller="Auth" asp-area="" asp-route-returnUrl="/Home/Index">Çıkış Yap</a>
+</div>

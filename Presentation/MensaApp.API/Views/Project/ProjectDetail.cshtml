@@ -1,0 +1,74 @@
+﻿@model Project
+
+@{
+    ViewData["Title"] = $"{Model.Name}";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="/projects">Projeler</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.Name</li>
+    </ol>
+</nav>
+
+<div class="container mt-5 mb-5 pb-5">
+    <div class="row mb-5 pb-5">
+        <div class="col-md-6">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <div class="carousel-inner">
+                    @for (int i = 0; i < Model.ProjectImages.Count(); i++)
+                    {
+                        var active = i == 1 ? "active" : "";
+                        <div class="carousel-item @active">
+                            <img src="~/ProjeResimleri/@Model.ProjectImages[i].ImageName" alt="@Model.Name">
+                        </div>
+                    }
+                </div>
+                <a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#custCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                <ol class="carousel-indicators list-inline">
+                    @for (int i = 0; i < Model.ProjectImages.Count(); i++)
+                    {
+                        var active = i == 1 ? "active" : "";
+                        <li class="list-inline-item @active">
+                            <a id="carousel-selector-0" class="selected" data-slide-to="@Model.ProjectImages[i]" data-target="#custCarousel">
+                                <img src="~/ProjeResimleri/@Model.ProjectImages[i].ImageName" class="img-fluid">
+                            </a>
+                        </li>
+                    }
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-6 mt-5">
+            <h1 style="font-family: 'Raleway', sans-serif;">@Model.Name</h1>
+            <hr />
+            <p style="font-family: 'Open Sans', sans-serif; font-size:18px;">@Model.Description</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12 mt-5" style="display:none;">
+    <h1 class="text-center">Öne Çıkanlar</h1>
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    var lastImg = 1;
+    document.getElementById("main_image").src = document.getElementById(lastImg).src;
+    document.getElementById(lastImg).className = "thumb selected";
+
+    function preview(img) {
+        document.getElementById(lastImg).className = "thumb normal";
+        img.className = "thumb selected";
+        document.getElementById(0).src = img.src;
+        lastImg = img.id
+    }
+</script>

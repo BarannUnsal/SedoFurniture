@@ -1,0 +1,19 @@
+﻿@model MensaApp.Domain.Entities.About
+@{
+    ViewData["Title"] = "Hakkımızda Güncelleme";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Hakkımızda Güncelleme</h1>
+<form method="post" asp-action="EditAbout" asp-controller="AdminAbout" class="form-group">
+    <label>Başlık Ekle</label>
+    <input asp-for="Title" class="form-control" />
+    <span asp-validation-for="Title" class="text-danger"></span>
+    <br />
+    <label>Açıklama</label>
+    <textarea rows="5" cols="40" asp-for="Description" class="form-control" ></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+<script src="~/lib/jquery/dist/jquery.js"></script>

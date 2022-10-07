@@ -1,0 +1,27 @@
+﻿@model MensaApp.API.Areas.Admin.Models.Categories.CategoryViewModel
+@{
+    ViewData["Title"] = "Kategori Ekle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Kategori Ekle</h1>
+<br />
+@using (Html.BeginForm("AddCategory", "AdminCategory", FormMethod.Post))
+{
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x=>x.CategoryName, new{@class="form-control"})
+    <span asp-validation-for="CategoryName" class="text-danger">
+
+    </span>
+    <br />
+    @Html.Label("Aktif")
+    @Html.CheckBoxFor(x=>x.IsActive, new{@class="form-control form-check-input"})
+    <span asp-validation-for="IsActive" class="text-danger">
+
+    </span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+}
+<div asp-validation-summary="ModelOnly"></div>
+<script src="~/lib/jquery/dist/jquery.js"></script>

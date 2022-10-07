@@ -1,0 +1,83 @@
+﻿@using MensaApp.Domain.Entities
+@model Product
+@{
+    ViewData["Title"] = "Ürün Ekleme";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Ürün Düzenleme Sayfası</h1>
+<br />
+@using (Html.BeginForm("EditProduct", "AdminProduct", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.Label("Ürün Adı")
+    @Html.TextBoxFor(x=>x.Name, new{@class="form-control"})
+    <span asp-validation-for="Name" class="text-danger">
+
+    </span>
+    <br />
+    @Html.Label("Ürün Açıklaması")
+    @Html.TextAreaFor(x=>x.Description, 15, 3, new{@class="form-control"})
+    <span asp-validation-for="Description" class="text-danger">
+
+    </span>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            @Html.Label("Ürün Resimi")
+            <input type="file" asp-for="ProductImages" class="form-control" multiple />
+            <span asp-validation-for="ProductImages" class="text-danger"></span>
+        </div>
+        <br />
+        <div class="col-md-6">
+            @Html.Label("Ürün Küçük Resmi")
+            <input type="file" asp-for="Thumbnail" class="form-control" />
+            <span asp-validation-for="Thumbnail" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+     <div class="row">
+        <div class="col-md-6">
+            <label>Kategori</label>
+            <select asp-items="ViewBag.ListOfCategory" asp-for="CategoryId" class="form-control">
+                <option>Kategori Seçiniz...</option>
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label>Alt Kategori</label>
+            <select class="form-control" asp-for="SubCategoryId">
+                <option>Alt Kategori Seçiniz...</option>
+            </select>
+            <span asp-validation-for="SubCategoryId" class="text-danger"></span>
+        </div>
+    </div>
+    <br />
+    @Html.Label("Aktif")
+    @Html.CheckBoxFor(x=>x.IsActive, new{@class="form-control form-check-input"})
+    <span asp-validation-for="IsActive" class="text-danger">
+
+    </span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Ürün Güncelle</button>
+}
+<div asp-validation-summary="ModelOnly"></div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+    $("select#CategoryId").change(function () {
+        var cid = $(this).val();
+        
+        $("select#SubCategoryId").empty();
+
+        $.getJSON(`/Admin/AdminProduct/GetSubCategory?cid=${cid}`, function (data) {
+            //console.log(data);
+            $.each(data, function (i, item) {
+                $("select#SubCategoryId").append(`<option value="${item.id}">${item.name}</option>`);
+            });
+        });
+    })
+});
+</script>

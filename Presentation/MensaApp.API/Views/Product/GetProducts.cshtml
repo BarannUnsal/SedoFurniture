@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Ürünler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Ürünler</li>
+    </ol>
+</nav>
+
+@await Component.InvokeAsync("GetProductPageBanner")
+
+<div class="container">
+    <div class="row">
+        @await Component.InvokeAsync("GetAllProduct")
+    </div>
+</div>
+
+<div class="col-md-12 mt-5">
+    <h1 class="text-center">Öne Çıkanlar</h1>
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>

@@ -1,0 +1,91 @@
+[11:55:22 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[11:55:22 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[11:55:24 INF] Creating key {9d989a9b-8ef9-47f4-ae35-5f828175d695} with creation date 2022-09-20 11:55:24Z, activation date 2022-09-20 11:55:24Z, and expiration date 2022-12-19 11:55:24Z.
+--[11:55:24 WRN] No XML encryptor configured. Key {9d989a9b-8ef9-47f4-ae35-5f828175d695} may be persisted to storage in unencrypted form.
+--[11:55:24 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-9d989a9b-8ef9-47f4-ae35-5f828175d695.xml'.
+--[11:55:25 INF] Now listening on: https://[::]:443
+--[11:55:25 INF] Now listening on: http://[::]:80
+--[11:55:25 INF] Application started. Press Ctrl+C to shut down.
+--[11:55:25 INF] Hosting environment: Development
+--[11:55:25 INF] Content root path: /app/
+--[11:55:28 INF] Request starting HTTP/2 GET https://localhost:49153/ - -
+--[11:55:28 INF] Request finished HTTP/2 GET https://localhost:49153/ - - - 403 0 - 59.2776ms
+--[11:57:12 INF] Request starting HTTP/2 GET https://localhost:49153/ - -
+--[11:57:12 INF] Request finished HTTP/2 GET https://localhost:49153/ - - - 403 0 - 4.5712ms
+--[12:41:14 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[12:41:14 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[12:41:17 INF] Creating key {8dd918bc-cafe-4488-b942-ac4bf96f0771} with creation date 2022-09-20 12:41:16Z, activation date 2022-09-20 12:41:16Z, and expiration date 2022-12-19 12:41:16Z.
+--[12:41:17 WRN] No XML encryptor configured. Key {8dd918bc-cafe-4488-b942-ac4bf96f0771} may be persisted to storage in unencrypted form.
+--[12:41:17 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-8dd918bc-cafe-4488-b942-ac4bf96f0771.xml'.
+--[12:41:18 INF] Now listening on: https://[::]:443
+--[12:41:18 INF] Now listening on: http://[::]:80
+--[12:41:18 INF] Application started. Press Ctrl+C to shut down.
+--[12:41:18 INF] Hosting environment: Development
+--[12:41:18 INF] Content root path: /app/
+--[12:41:23 INF] Request starting HTTP/2 GET https://localhost:49157/ - -
+--[12:41:23 INF] Request finished HTTP/2 GET https://localhost:49157/ - - - 403 0 - 196.9634ms
+--[12:44:03 INF] Request starting HTTP/1.1 GET http://localhost:49158/ - -
+--[12:44:03 INF] Request finished HTTP/1.1 GET http://localhost:49158/ - - - 403 0 - 14.3965ms
+--[12:44:06 INF] Request starting HTTP/2 GET https://localhost:49157/ - -
+--[12:44:06 INF] Request finished HTTP/2 GET https://localhost:49157/ - - - 403 0 - 2.3112ms
+--[12:44:56 INF] Request starting HTTP/1.1 GET http://localhost:49158/ - -
+--[12:44:56 INF] Request finished HTTP/1.1 GET http://localhost:49158/ - - - 403 0 - 2.5677ms
+--[12:45:10 INF] Request starting HTTP/2 GET https://localhost:49157/ - -
+--[12:45:10 INF] Request finished HTTP/2 GET https://localhost:49157/ - - - 403 0 - 6.1322ms
+--[12:45:31 INF] Request starting HTTP/2 GET https://localhost:49157/ - -
+--[12:45:31 INF] Request finished HTTP/2 GET https://localhost:49157/ - - - 403 0 - 3.1398ms
+--[13:05:26 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[13:05:26 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[13:05:27 INF] Creating key {2ac06032-4436-4a6a-8402-b808cf22e20e} with creation date 2022-09-20 13:05:27Z, activation date 2022-09-20 13:05:27Z, and expiration date 2022-12-19 13:05:27Z.
+--[13:05:27 WRN] No XML encryptor configured. Key {2ac06032-4436-4a6a-8402-b808cf22e20e} may be persisted to storage in unencrypted form.
+--[13:05:27 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-2ac06032-4436-4a6a-8402-b808cf22e20e.xml'.
+--[13:05:27 INF] Now listening on: https://[::]:443
+--[13:05:27 INF] Now listening on: http://[::]:80
+--[13:05:27 INF] Application started. Press Ctrl+C to shut down.
+--[13:05:27 INF] Hosting environment: Development
+--[13:05:27 INF] Content root path: /app/
+--[13:05:29 INF] Request starting HTTP/2 GET https://localhost:49159/ - -
+--[13:05:29 INF] Request finished HTTP/2 GET https://localhost:49159/ - - - 403 0 - 96.7732ms
+--[13:45:54 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[13:45:54 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[13:45:55 INF] Creating key {0684b9ef-44e8-40e5-85dc-872bd3e34188} with creation date 2022-09-20 13:45:55Z, activation date 2022-09-20 13:45:55Z, and expiration date 2022-12-19 13:45:55Z.
+--[13:45:55 WRN] No XML encryptor configured. Key {0684b9ef-44e8-40e5-85dc-872bd3e34188} may be persisted to storage in unencrypted form.
+--[13:45:55 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-0684b9ef-44e8-40e5-85dc-872bd3e34188.xml'.
+--[13:45:56 INF] Now listening on: https://[::]:443
+--[13:45:56 INF] Now listening on: http://[::]:80
+--[13:45:56 INF] Application started. Press Ctrl+C to shut down.
+--[13:45:56 INF] Hosting environment: Development
+--[13:45:56 INF] Content root path: /app/
+--[13:45:58 INF] Request starting HTTP/2 GET https://localhost:49155/ - -
+--[13:45:58 INF] Request finished HTTP/2 GET https://localhost:49155/ - - - 403 0 - 62.8056ms
+--[14:15:52 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[14:15:52 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[14:15:53 INF] Creating key {9882ea9e-11d7-4818-9737-eb927ce92cc8} with creation date 2022-09-20 14:15:53Z, activation date 2022-09-20 14:15:53Z, and expiration date 2022-12-19 14:15:53Z.
+--[14:15:53 WRN] No XML encryptor configured. Key {9882ea9e-11d7-4818-9737-eb927ce92cc8} may be persisted to storage in unencrypted form.
+--[14:15:53 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-9882ea9e-11d7-4818-9737-eb927ce92cc8.xml'.
+--[14:15:54 INF] Now listening on: https://[::]:443
+--[14:15:54 INF] Now listening on: http://[::]:80
+--[14:15:54 INF] Application started. Press Ctrl+C to shut down.
+--[14:15:54 INF] Hosting environment: Development
+--[14:15:54 INF] Content root path: /app/
+--[14:15:59 INF] Request starting HTTP/2 GET https://localhost:49157/ - -
+--[14:15:59 INF] Request finished HTTP/2 GET https://localhost:49157/ - - - 403 0 - 112.7473ms
+--[14:57:33 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+--[14:57:33 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+--[14:57:34 INF] Creating key {f51570e7-a9e2-4236-be3b-e349b09bca22} with creation date 2022-09-20 14:57:34Z, activation date 2022-09-20 14:57:34Z, and expiration date 2022-12-19 14:57:34Z.
+--[14:57:34 WRN] No XML encryptor configured. Key {f51570e7-a9e2-4236-be3b-e349b09bca22} may be persisted to storage in unencrypted form.
+--[14:57:34 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-f51570e7-a9e2-4236-be3b-e349b09bca22.xml'.
+--[14:57:34 INF] Now listening on: https://[::]:443
+--[14:57:34 INF] Now listening on: http://[::]:80
+--[14:57:34 INF] Application started. Press Ctrl+C to shut down.
+--[14:57:34 INF] Hosting environment: Development
+--[14:57:34 INF] Content root path: /app/
+--[14:57:36 INF] Request starting HTTP/2 GET https://localhost:49159/ - -
+--[14:57:36 INF] Request finished HTTP/2 GET https://localhost:49159/ - - - 403 0 - 80.3596ms
+--[14:57:38 INF] Request starting HTTP/2 GET https://localhost:49159/ - -
+--[14:57:38 INF] Request finished HTTP/2 GET https://localhost:49159/ - - - 403 0 - 2.9266ms
+--[14:57:39 INF] Request starting HTTP/2 GET https://localhost:49159/ - -
+--[14:57:39 INF] Request finished HTTP/2 GET https://localhost:49159/ - - - 403 0 - 1.3382ms
+--[14:57:39 INF] Request starting HTTP/2 GET https://localhost:49159/ - -
+--[14:57:39 INF] Request finished HTTP/2 GET https://localhost:49159/ - - - 403 0 - 1.8404ms
+--

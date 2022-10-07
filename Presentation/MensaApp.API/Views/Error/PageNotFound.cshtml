@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "404";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center mt-4"><span class="text-danger fs-1">404</span> - Sayfa Bulunamadı</h1>
+<p class="text-center fs-5">Oops, aradığınız sayfa bulunamadı. Lütfen kontrol edin</p>
+
+<div class="col-md-12 mt-5" style="display:none;">
+    <h1 class="text-center">Öne Çıkanlar</h1>
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>

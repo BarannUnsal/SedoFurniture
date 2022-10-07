@@ -1,0 +1,16 @@
+﻿@model List<Category>
+@using MensaApp.API.Filters
+
+<div class="sitemap_header">
+    <h2 class="header_">Kategoriler</h2>
+</div>
+<ul class="list-inline mt-4">
+    @foreach (var item in Model)
+    {
+        <li class="list-inline-item">
+            <a href="/category/@item.Id/@SEOLinks.ChangeLinks(item.CategoryName.ToLower())" class="text-decoration-none text-black-50">
+               <i class="fa-solid fa-circle fa-2xs" style="opacity: 0.5;"></i> @item.CategoryName
+            </a>
+        </li>
+    }
+</ul>

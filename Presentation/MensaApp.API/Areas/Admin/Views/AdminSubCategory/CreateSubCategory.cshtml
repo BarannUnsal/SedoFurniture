@@ -1,0 +1,20 @@
+﻿@model MensaApp.Domain.Entities.SubCategory
+@{
+    ViewData["Title"] = "Alt Kategori Ekleme";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Alt Kategori Ekle</h1>
+<form asp-action="CreateSubCategory" class="form-group" asp-controller="AdminSubCategory" method="post">
+    <label>Alt Kategori Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+    <label>Kategori</label>
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.ListOfCategory, "Kategori Seçiniz...", new{@class = "form-control"})
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+    <br />
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>
+<div asp-validation-summary="ModelOnly"></div>

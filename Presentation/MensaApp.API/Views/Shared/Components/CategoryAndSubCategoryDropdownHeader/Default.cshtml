@@ -1,0 +1,24 @@
+﻿@model List<Category>
+@using MensaApp.API.Filters
+
+<div class="container">
+    <div class="row g-3">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-4">
+                <div class="col-megamenu">
+                    <h6><a class="dropdown-item dropdow_menu" style="font-family: 'Roboto', sans-serif; letter-spacing: 1px;" href="/category/@item.Id/@SEOLinks.ChangeLinks(item.CategoryName.ToLower())">@item.CategoryName.ToUpper()</a></h6>
+                    <ul class="list-unstyled">
+                        @if (item.SubCategories != null)
+                        {
+                            @for (int i = 0; i < item.SubCategories.Count(); i++)
+                            {
+                                <li><a href="/subcategory/@item.SubCategories[i].Id/@SEOLinks.ChangeLinks(item.SubCategories[i].Name.ToLower())" class="dropdown-item alt_item" style="font-family: 'Roboto', sans-serif; letter-spacing: 1px;">@item.SubCategories[i].Name</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>

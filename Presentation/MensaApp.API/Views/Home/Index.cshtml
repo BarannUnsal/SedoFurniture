@@ -1,0 +1,25 @@
+﻿@model List<Product>
+
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div>
+    @await Component.InvokeAsync("BannerProduct")
+</div>
+<div class="mt-5">
+    @await Component.InvokeAsync("CarouselProduct")
+</div>
+<div class="mt-5">
+    @await Component.InvokeAsync("HomePageService")
+</div>
+<div class="mt-5">
+    @await Component.InvokeAsync("ProductOnHomePage")
+</div>
+
+<div class="col-md-12 mt-5">
+    <h1 class="header_ pt-3">Öne Çıkanlar</h1>
+    @await Component.InvokeAsync("GetProductPageCarousel")
+</div>
+
+@await Html.PartialAsync("ContactForm.cshtml")

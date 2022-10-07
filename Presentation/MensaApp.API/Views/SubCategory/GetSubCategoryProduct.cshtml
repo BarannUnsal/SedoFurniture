@@ -1,0 +1,30 @@
+﻿@using MensaApp.API.Filters
+
+@{
+    ViewData["Title"] = $"{@ViewBag.subCatName}";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
+        <li class="breadcrumb-item"><a href="/category/@ViewBag.catID/@SEOLinks.ChangeLinks(@ViewBag.catName.ToLower())">@ViewBag.catName</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.subCatName</li>
+    </ol>
+</nav>
+
+
+<div style="display:none;">
+    @await Component.InvokeAsync("ProductDetailCarousel")
+</div>
+
+<div class="container pb-5 mb-5">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+                <h2 class="header_ pt-3" style="font-family: 'Raleway', sans-serif;">@ViewBag.subCatName</h2>
+                @await Component.InvokeAsync("ProductWithSubCategory", new {@id = ViewBag.subID})
+            </div>
+        </div>
+    </div>
+</div>

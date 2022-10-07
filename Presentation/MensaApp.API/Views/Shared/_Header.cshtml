@@ -1,0 +1,41 @@
+﻿<nav class="navbar navbar-expand-lg bg-light border-bottom">
+    <div class="container-fluid">
+        <a asp-action="Index" asp-controller="Home">
+            <img src="~/img/logo ps.jpg" height="25" width="25" class="ms-3" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_" aria-controls="navbar_" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars navbar-toggler-icon" style="color: #EC994B"></i>
+        </button>
+        <div class="container d-flex mt-2 me-3">
+            <div class="text-center collapse navbar-collapse" id="navbar_">
+                <ul class="navbar-nav col-12 col-lg-auto my-2 my-md-0">
+                    <li class="dropdown has-megamenu">
+                        <a class="nav-link nav_link text-dark pe-auto" style="font-size: 18px; cursor: pointer; font-family: 'Roboto', sans-serif; text-indent: 10px; letter-spacing: 1px;" data-bs-toggle="dropdown"> Ürünler </a>
+                        <div class="dropdown-menu megamenu" role="menu">
+                            @await Component.InvokeAsync("CategoryAndSubCategoryDropdownHeader")
+                        </div>
+                    </li>
+                    <li class="text-white">
+                        <a asp-action="Projects" asp-controller="Project" class="btn-ligth btn nav_link" style="font-size: 18px; font-family: 'Roboto', sans-serif; text-indent: 10px; letter-spacing: 1px;">
+                            Projelerimiz
+                        </a>
+                    </li>
+                    <li class="text-white">
+                        <a asp-action="AboutUs" asp-controller="About" class="btn-ligth btn nav_link" style="font-size: 18px; font-family: 'Roboto', sans-serif; text-indent: 10px; letter-spacing: 1px;">
+                            Hakkımızda
+                        </a>
+                    </li>
+                    <li class="text-white">
+                        <a asp-action="Contact" asp-controller="Contact" class="btn-ligth btn nav_link" style="font-size: 18px; font-family: 'Roboto', sans-serif; text-indent: 10px; letter-spacing: 1px;">
+                            İletişim
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex mx-auto" role="search" method="get" asp-action="SearchTerm" asp-controller="Product"> 
+                    <input class="form-control me-2" placeholder="Ara" type="text" name="SearchString" aria-label="Search">
+                    <input type="submit" value="Ara" class="btn btn-default" />
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
