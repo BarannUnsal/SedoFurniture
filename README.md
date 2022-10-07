@@ -1,4 +1,5 @@
-<a class=text-center></a>
+
+  [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture)
 
 
 [View Demo ](https://www.sedomobilya.com/)
@@ -7,7 +8,6 @@
 
 ## About The Project
 <p align="center">
-  [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture)
 </p>
 
 ![Screenshot_1](https://user-images.githubusercontent.com/96000792/194583320-e74b191b-782b-45e2-a32a-251ada2b78e3.png)
