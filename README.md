@@ -25,6 +25,6 @@ Design patterns and some technologies I used in the project
 ## Built With
 - Asp Net Core 6
 - MVC
-- EF Core
-- Bootstrap
+- EF Core 6
+- Bootstrap 5
 - Jquery
