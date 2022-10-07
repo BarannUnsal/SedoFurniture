@@ -21,3 +21,6 @@
 - EF Core 6
 - Bootstrap 5
 - Jquery
+
+## Contact
+Baran Ünsal [barannunsal@gmail.com](barannunsal@gmail.com)
