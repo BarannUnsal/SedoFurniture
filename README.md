@@ -3,7 +3,7 @@
 </p>
 
   [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture) 
-<a href="https://www.markdownguide.org" target="_blank" class="text-center">Learn Markdown!</a>
+<a href="https://www.markdownguide.org" target="_blank" style="text-align:center">Learn Markdown!</a>
   
 
 [View Demo ](https://www.sedomobilya.com/)
