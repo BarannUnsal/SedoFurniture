@@ -7,7 +7,7 @@
 
 ## About The Project
 <p align="center">
-  <img width="500" height="450" src="https://user-images.githubusercontent.com/96000792/194583320-e74b191b-782b-45e2-a32a-251ada2b78e3.png">
+  <img width="1000" height="850" src="https://user-images.githubusercontent.com/96000792/194583320-e74b191b-782b-45e2-a32a-251ada2b78e3.png">
 </p>
 
 ![Screenshot_1](https://user-images.githubusercontent.com/96000792/194583320-e74b191b-782b-45e2-a32a-251ada2b78e3.png)
