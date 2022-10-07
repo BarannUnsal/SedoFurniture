@@ -7,8 +7,8 @@
   
 
 [View Demo ](https://www.sedomobilya.com/)
- [ Report Bug ](https://github.com/BarannUnsal/SedoFurniture/issues)
- [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture/issues)
+ ·  [ Report Bug ](https://github.com/BarannUnsal/SedoFurniture/issues)
+ · [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture/issues)
 
 
 ## About The Project
