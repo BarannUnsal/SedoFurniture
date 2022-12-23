@@ -7,8 +7,8 @@
 </p>
   
 <p align="center">
-  <a href="https://www.sedomobilya.com/">View Demo </a>
-  <a href="https://github.com/BarannUnsal/SedoFurniture/issues"> Report Bug </a>
+  <a href="https://www.sedomobilya.com/">View Demo |</a>
+  <a href="https://github.com/BarannUnsal/SedoFurniture/issues"> Report Bug |</a>
   <a href="https://github.com/BarannUnsal/SedoFurniture/issues">Explore the docs »</a>
 </p>
 
