@@ -7,9 +7,9 @@
 </p>
   
 <p align="center">
-[View Demo ](https://www.sedomobilya.com/)
- ·  [ Report Bug ](https://github.com/BarannUnsal/SedoFurniture/issues)
- · [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture/issues)
+  <a href="https://www.sedomobilya.com/">View Demo </a>
+  <a href="https://github.com/BarannUnsal/SedoFurniture/issues"> Report Bug </a>
+  <a href="https://github.com/BarannUnsal/SedoFurniture/issues">Explore the docs »</a>
 </p>
 
 ## About The Project
