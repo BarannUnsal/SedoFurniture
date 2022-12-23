@@ -6,11 +6,11 @@
   <a href="https://github.com/BarannUnsal/SedoFurniture">Explore the docs »</a>
 </p>
   
-
+<p align="center">
 [View Demo ](https://www.sedomobilya.com/)
  ·  [ Report Bug ](https://github.com/BarannUnsal/SedoFurniture/issues)
  · [Explore the docs »](https://github.com/BarannUnsal/SedoFurniture/issues)
-
+</p>
 
 ## About The Project
 
